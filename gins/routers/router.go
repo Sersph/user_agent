@@ -15,6 +15,7 @@ func InitRouter(r *gin.Engine) {
 	r.Use(Cors())
 
 	r.POST("/v1/data", controller.ProcessData)
+	r.POST("/v1/data/edit", controller.Edit)
 	r.POST("/v1/setCookies", controller.SetCookies)
 	r.GET("/v1/getCookies", controller.GetCookies)
 	r.GET("/v1/data/list", controller.List)
